@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      /* first carousel */
+      @media (max-width:970px) and (min-width:455px){
+        .container-fluid .carousel .carousel-inner .carousel-item .carousel-caption .display-3{
+          font-size: 30px;
+        }
+        .container-fluid .carousel .carousel-inner .carousel-item .carousel-caption .display-4{
+          font-size: 20px;
+        }
+      }
+
+      @media (max-width:454px){
+        .container-fluid .carousel .carousel-inner .carousel-item .carousel-caption .display-3{
+          font-size: 20px;
+        }
+        .container-fluid .carousel .carousel-inner .carousel-item .carousel-caption .display-4{
+          font-size: 14px;
+        }
+      } 
+
+      /* footer */
+      @media (max-width:790px) and (min-width:635px){
+        .container-fluid .card .card-img-overlay .row .text-light{
+          font-size:20px
+        }
+      }
+
+      @media (max-width:634px){
+        .container-fluid .card .card-img-overlay .row .text-light{
+          font-size:12px
+        }
+      }
+
+      /* elements style dropdown */
+
+      @media (max-width:680px) and (min-width:590px){
+        .showtitle{
+          font-size: 30px; font-weight:bold
+        }
+        .showtext{
+          font-size:14px
+        }
+      }
+
+      @media (max-width:589px) and (min-width:515px){
+        .showtitle{
+          font-size: 25px; font-weight:bold
+        }
+        .showtext{
+          font-size:12px
+        }
+      }
+
+      @media (max-width:514px) and (min-width:442px){
+        .showtitle{
+          font-size: 20px; font-weight:bold
+        }
+        .showtext{
+          font-size:10px
+        }
+      }
+
+      @media (max-width:441px) {
+        .showtitle{
+          font-size: 16px; font-weight:bold
+        }
+        .showtext{
+          font-size:7px
+        }
+      }
+
+      /* button up page */
+      .headofpage{
+        background-color: rgba(255, 0, 0, 0.288); height:100px; width:100px; position:fixed; z-index: 10; 
+        bottom:10px; right:10px; border-radius:50px;
+        transition:.5s;
+        display: flex;
+        animation-name: drs;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+      }
+      @keyframes drs{
+        0%{background-color: rgba(255, 0, 0, 0.301);}
+        25%{background-color: rgba(255, 230, 0, 0.308);}
+        50%{background-color: rgba(255, 102, 0, 0.301);}
+        75%{background-color: rgba(255, 0, 212, 0.301);}
+        100%{background-color: rgba(255, 0, 0, 0.301);}
+
+      }
+
+      .headofpage:hover{
+        background-color: red;
+        animation-play-state: paused;
+        border-radius:10px;
+        transition:.5s;
+      }
+
+      .hight{
+        font-size:25px; text-transform:capitalize; display:inline-block;
+        width:100%; height:100%; display:flex; justify-content:center; align-items:center;
+        text-decoration:none; color:transparent;
+        transition:1s
+      }
+      .hight:hover{
+        color:black; text-decoration:none;
+        
+      }
+
+      
+    </style>
+</head>
+<body>
+  <div class="headofpage">
+    <a href="#hhh" class="hight"> head </a>
+  </div>
+
+  <!-- navbar -->
+  <div class="container-fluid" id="hhh">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">MUSIC SM🎼</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">buy</a>
+                <ul class="dropdown-menu" >
+                  <li><a href="buy_tools.html" class="dropdown-item">Tools</a></li>
+                  <li><a href="#albums" class="dropdown-item">albums</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">style</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#classical" class="dropdown-item">Classical</a></li>
+                    <li><a href="#rock" class="dropdown-item">Rock</a></li>
+                    <li><a href="#pop" class="dropdown-item">Pop</a></li>
+                    <li><a href="#hip-hop" class="dropdown-item">Hip-Hop</a></li>
+                    <li><a href="#jazz" class="dropdown-item">Jazz</a></li>
+                    <li><a href="#electronic" class="dropdown-item">Electronic</a></li>
+                    <li><div class="dropdown-divider"></div></li>
+                    <li><a href="musicarab.html" class="dropdown-item">arabic</a></li>
+                </ul>
+            </li>
+          </ul>
+          
+          <div>
+            <button class="btn btn-outline-dark">log in</button>
+            <button class="btn btn-outline-dark">sing up</button>
+          </div>
+        </div>
+    </nav>
+  </div>
+
+  <!-- carosel -->
+  <div class="container-fluid">
+    <div class="carousel slide" id="ms" data-ride="carousel">
+      
+      <ol class="carousel-indicators">
+        <li data-target="#ms" data-slide-to="0" class="active"></li>
+        <li data-target="#ms" data-slide-to="1"></li>
+        <li data-target="#ms" data-slide-to="2"></li>
+        <li data-target="#ms" data-slide-to="3"></li>
+      </ol>
+      
+      <div class="carousel-inner">
+        <!-- img 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-caption justify-align-items">
+            <p class="text-danger display-3 border border-top-0 border-right-0 border-left-0 border-danger">The social functions of music </p>
+            <p class="text-danger display-4" >
+              Music is often functional because it is something that can promote human well-being by facilitating human contact, human 
+              meaning, and human ...
+            </p>
+          </div>
+          <img src="img/1.jpg" alt="" class="w-100">
+        </div>
+
+        <!-- img 2 -->
+        <div class="carousel-item">
+          <img src="img/2.jpg" alt="" class="w-100">
+          <div class="carousel-caption">
+            <p class="display-3 text-dark border border-top-0 border-right-0 border-left-0 border-dark">Music Classic</p>
+            <p class="display-4 text-dark">
+              Classical music generally refers to the art music of the Western world, considered to be distinct from Western folk music 
+              or popular music traditions.
+            </p>
+          </div>
+        </div>
+
+        <!-- img 3 -->
+        <div class="carousel-item">
+          <img src="img/3.jpg" alt="" class="w-100">
+          <div class="carousel-caption">
+            <p class="text-warning display-3 border border-top-0 border-right-0 border-left-0 border-warning">Guitar</p>
+            <p class="text-warning display-4" >
+              The guitar is a stringed musical instrument, that is usually fretted (with some exceptions) and typically has six or twelve 
+              strings.</p>
+          </div>
+        </div>
+        
+        <!-- img 4 -->
+        <div class="carousel-item">
+          <img src="img/4.jpg" alt="" class="w-100">
+          <div class="carousel-caption">
+            <p class="display-3 border border-top-0 border-right-0 border-left-0 ">Electronic music</p>
+            <p class="display-4">
+              Electronic music, any music involving electronic processing, such as recording and editing on tape, and whose reproduction 
+              involves the use of loudspeakers
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#ms" class="carousel-control-prev" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+
+      <a href="#ms" class="carousel-control-next" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- what mean music -->
+  <div class="container-fluid my-4">
+    <h3 class="my-4 text-center">What Mean Music</h3>
+    <div class="row my-5">
+
+      <div class="col-lg-2 col-md-4 col-sm-6 my-3">
+        <a href="#Pythagoras" data-toggle="collapse">
+          <img src="img/pita.jpg" alt="" class="rounded w-100">
+        </a>
+        <div class="collapse" id="Pythagoras">
+          Pythagoras : <br>
+        “There is geometry in the humming of the strings, there is music in the spacing of the spheres.”
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 my-3">
+        <a href="#Plato" data-toggle="collapse">
+          <img src="img/Plato.jpg" alt="" class="rounded w-100">
+        </a>
+        <div class="collapse" id="Plato">
+          Plato  : <br>
+          “Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.”        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 my-3">
+        <a href="#Leibniz" data-toggle="collapse">
+          <img src="img/Leibniz.jpg" alt="" class="rounded w-100">
+        </a>
+        <div class="collapse" id="Leibniz">
+          Leibniz: <br>
+          “Music is the hidden arithmetical exercise of a mind unconscious that it is calculating.”
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 my-3">
+        <a href="#Hogarth" data-toggle="collapse">
+          <img src="img/Hogarth.jpg" alt="" class="rounded w-100">
+        </a>
+        <div class="collapse" id="Hogarth">
+          Hogarth: <br>
+          “The minuet is allowed by the dancing-masters themselves to be the perfection of all dancing.”
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 my-3">
+        <a href="#Nietzsche" data-toggle="collapse">
+          <img src="img/Nietzsche.jpg" alt="" class="rounded w-100">
+        </a>
+        <div class="collapse" id="Nietzsche">
+          Nietzsche: <br>
+          “Without music, life would be a mistake.”
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6 my-3">
+        <a href="#Schopenhauer" data-toggle="collapse">
+          <img src="img/Schopenhauer.jpg" alt="" class="rounded w-100">
+        </a>
+        <div class="collapse" id="Schopenhauer">
+          Schopenhauer: <br>
+          “The inexpressible depth of music, so easy to understand and yet so inexplicable, is due to the fact that it reproduces 
+          all the emotions of our innermost being, but entirely without reality and remote from its pain… Music expresses only the 
+          quintessence of life and its events, never these themselves.” 
+        </div>
+      </div>
+  
+  </div>
+</div>
+<!-- ------------------------------------------------------------------------------------------- -->
+  <!-- music classic -->
+  <div class="container-fluid my-4">
+    
+    <div class="row">
+      <!-- Music classical -->
+      <div class="col-12 my-2" id="classical">
+        <div class="card">
+          <img src="img/22.jpg" alt="" class="card-img">
+          <div class="card-img-overlay">
+            <h2 class="card-title my-4 display-3 showtitle">Music classical</h2>
+            <p class="card-text showtext">
+              Classical music generally refers to the art music of the Western world, considered to be distinct from Western folk music or popular
+              music traditions. It is sometimes distinguished as Western classical music, as the term "classical music" can also be applied to 
+              non-Western art musics. Classical music is often characterized by formality and complexity in its musical form and harmonic 
+              organization, particularly with the use of polyphony. Since at least the ninth century it has been primarily a written 
+              tradition, spawning a sophisticated notational system, as well as accompanying literature in analytical, critical, 
+              historiographical, musicological and philosophical practices. A foundational component of Western culture, classical music is 
+              frequently seen from the perspective of individual or groups of composers, whose compositions, personalities and beliefs have 
+              fundamentally shaped its history.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music rock -->
+      <div class="col-12 my-2" id="rock">
+        <div class="card">
+          <img src="img/44.jpg" alt="" class="card-img">
+          <div class="card-img-overlay">
+            <h2 class="card-title my-4 display-3 showtitle">Music rock</h2>
+            <p class="card-text showtext">
+              Classical music generally refers to the art music of the Western world, considered to be distinct from Western folk music or popular
+              music traditions. It is sometimes distinguished as Western classical music, as the term "classical music" can also be applied to 
+              non-Western art musics. Classical music is often characterized by formality and complexity in its musical form and harmonic 
+              organization, particularly with the use of polyphony. Since at least the ninth century it has been primarily a written 
+              tradition, spawning a sophisticated notational system, as well as accompanying literature in analytical, critical, 
+              historiographical, musicological and philosophical practices. A foundational component of Western culture, classical music is 
+              frequently seen from the perspective of individual or groups of composers, whose compositions, personalities and beliefs have 
+              fundamentally shaped its history.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music pop -->
+      <div class="col-12 my-2" id="pop">
+        <div class="card">
+          <img src="img/66.jpg" alt="" class="card-img">
+          <div class="card-img-overlay">
+            <h2 class="card-title my-4 display-3 showtitle">Music pop</h2>
+            <p class="card-text showtext">
+              Classical music generally refers to the art music of the Western world, considered to be distinct from Western folk music or popular
+              music traditions. It is sometimes distinguished as Western classical music, as the term "classical music" can also be applied to 
+              non-Western art musics. Classical music is often characterized by formality and complexity in its musical form and harmonic 
+              organization, particularly with the use of polyphony. Since at least the ninth century it has been primarily a written 
+              tradition, spawning a sophisticated notational system, as well as accompanying literature in analytical, critical, 
+              historiographical, musicological and philosophical practices. A foundational component of Western culture, classical music is 
+              frequently seen from the perspective of individual or groups of composers, whose compositions, personalities and beliefs have 
+              fundamentally shaped its history.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music hip-hop -->
+      <div class="col-12 my-2" id="hip-hop">
+        <div class="card">
+          <img src="img/66.jpg" alt="" class="card-img">
+          <div class="card-img-overlay">
+            <h2 class="card-title my-4 display-3 showtitle">Music hip-hop</h2>
+            <p class="card-text showtext">
+              Classical music generally refers to the art music of the Western world, considered to be distinct from Western folk music or popular
+              music traditions. It is sometimes distinguished as Western classical music, as the term "classical music" can also be applied to 
+              non-Western art musics. Classical music is often characterized by formality and complexity in its musical form and harmonic 
+              organization, particularly with the use of polyphony. Since at least the ninth century it has been primarily a written 
+              tradition, spawning a sophisticated notational system, as well as accompanying literature in analytical, critical, 
+              historiographical, musicological and philosophical practices. A foundational component of Western culture, classical music is 
+              frequently seen from the perspective of individual or groups of composers, whose compositions, personalities and beliefs have 
+              fundamentally shaped its history.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music jazz -->
+      <div class="col-12 my-2" id="jazz">
+        <div class="card">
+          <img src="img/33.jpg" alt="" class="card-img">
+          <div class="card-img-overlay">
+            <h2 class="card-title my-4 display-3 text-warning showtitle">Music jazz</h2>
+            <p class="card-text text-warning showtext">
+              Classical music generally refers to the art music of the Western world, considered to be distinct from Western folk music or popular
+              music traditions. It is sometimes distinguished as Western classical music, as the term "classical music" can also be applied to 
+              non-Western art musics. Classical music is often characterized by formality and complexity in its musical form and harmonic 
+              organization, particularly with the use of polyphony. Since at least the ninth century it has been primarily a written 
+              tradition, spawning a sophisticated notational system, as well as accompanying literature in analytical, critical, 
+              historiographical, musicological and philosophical practices. A foundational component of Western culture, classical music is 
+              frequently seen from the perspective of individual or groups of composers, whose compositions, personalities and beliefs have 
+              fundamentally shaped its history.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music electronic -->
+      <div class="col-12 my-2" id="electronic">
+        <div class="card">
+          <img src="img/66.jpg" alt="" class="card-img">
+          <div class="card-img-overlay">
+            <h2 class="card-title my-4 display-3 showtitle">Music electronic</h2>
+            <p class="card-text showtext">
+              Classical music generally refers to the art music of the Western world, considered to be distinct from Western folk music or popular
+              music traditions. It is sometimes distinguished as Western classical music, as the term "classical music" can also be applied to 
+              non-Western art musics. Classical music is often characterized by formality and complexity in its musical form and harmonic 
+              organization, particularly with the use of polyphony. Since at least the ninth century it has been primarily a written 
+              tradition, spawning a sophisticated notational system, as well as accompanying literature in analytical, critical, 
+              historiographical, musicological and philosophical practices. A foundational component of Western culture, classical music is 
+              frequently seen from the perspective of individual or groups of composers, whose compositions, personalities and beliefs have 
+              fundamentally shaped its history.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    
+  </div>
+
+  <!-- card -->
+  <div class="container-fluid my-3">
+    <div class="text-center my-4">
+      <h3>the best musical</h3>
+    </div>
+    <div class="row">
+      <!-- beethoven -->
+      <div class="col-md-4 col-sm-12">
+        <div class="card" >
+          <img src="img/bt.jpeg" class="card-img-top"  alt="" style="height:400px">
+          <div class="card-body">
+            <h2 card-title>beethoven</h2>
+            <p card-text> 
+              Ludwig van Beethoven was a German composer and pianist. He is one of the most 
+              revered figures in the  ...
+            </p>
+            <button class="btn btn-outline-danger" data-target="#beet" data-toggle="collapse"> more ..</button>
+            <div class="collapse" id="beet">
+              Ludwig van Beethoven (baptised 17 December 1770 – 26 March 1827) was a German composer and pianist. He is one of the most 
+              revered figures in the history of Western music; his works rank among the most performed of the classical music repertoire 
+              and span the transition from the Classical period to the Romantic era in classical music. Beethoven's career has 
+              conventionally been divided into early, middle, and late periods. His early period, during which he forged his craft, 
+              is typically considered to have lasted until 1802. From 1802 to around 1812, his middle period showed an individual 
+              development from the styles of Joseph Haydn and Wolfgang Amadeus Mozart, and is sometimes characterized as heroic. 
+              During this time, he began to grow increasingly deaf. In his late period, from 1812 to 1827, he extended his innovations 
+              in musical form and expression.
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- mozart -->
+      <div class="col-md-4 col-sm-12">
+        <div class="card" >
+          <img src="img/mz.jpeg" class="card-img-top"  alt="" style="height:400px">
+          <card class="card-body">
+            <h2 card-title>mozart</h2>
+            <p card-text> 
+              Wolfgang Amadeus Mozart was a prolific and influential composer of the Classical 
+              period. Despite his short ...
+            </p>
+            <button class="btn btn-outline-danger" data-target="#moza" data-toggle="collapse"> more ..</button>
+            <div class="collapse" id="moza">
+              Wolfgang Amadeus Mozart (27 January 1756 – 5 December 1791) was a prolific and influential composer of the Classical 
+              period. Despite his short life, his rapid pace of composition resulted in more than 800 works of virtually every Western 
+              classical genre of his time. Many of these compositions are acknowledged as pinnacles of the symphonic, concertante, 
+              chamber, operatic, and choral repertoire. Mozart is widely regarded as among the greatest composers in the history of 
+              Western music, with his music admired for its "melodic beauty, its formal elegance and its richness of harmony and 
+              texture".
+            </div>
+          </card>
+        </div>
+      </div>
+      <!-- vivaldi -->
+      <div class="col-md-4 col-sm-12">
+        <div class="card" >
+          <img src="img/vv.jpeg" class="card-img-top"  alt="" style="height:400px">
+          <card class="card-body">
+            <h2 card-title>vivaldi</h2>
+            <p card-text> 
+              Antonio Lucio Vivaldi was an Italian composer, virtuoso violinist and impresario of 
+              Baroque music. Along  ...
+            </p>
+            <button class="btn btn-outline-danger" data-target="#viva" data-toggle="collapse"> more ..</button>
+            <div class="collapse" id="viva">
+              Antonio Lucio Vivaldi (4 March 1678 – 28 July 1741) was an Italian composer, virtuoso violinist and impresario of 
+              Baroque music. Along with Johann Sebastian Bach and George Frideric Handel, Vivaldi ranks amongst the greatest 
+              Baroque composers and his influence during his lifetime was widespread across Europe, giving origin to many imitators 
+              and admirers. He pioneered many developments in orchestration, violin technique and programmatic music. He consolidated 
+              the emerging concerto form into a widely accepted and followed idiom.
+            </div>
+          </card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Musical Instruments -->
+  <div class="container-fluid my-5">
+    <div>
+      <h2 class="text-center">Musical Instruments</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-sm-12 my-3">
+        <!-- carousel -->
+        <div class="carousel slide" id="mi" date-ride="carousel">
+
+          <ol class="carousel-indicators">
+            <li data-target="#mi" data-slide-to="0" class="active"></li>
+            <li data-target="#mi" data-slide-to="1"></li>
+            <li data-target="#mi" data-slide-to="2"></li>
+            <li data-target="#mi" data-slide-to="3"></li>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/11.jpg" alt="" class="w-100">
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/22.jpg" alt="" class="w-100">
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/33.jpg" alt="" class="w-100">
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/55.jpg" alt="" class="w-100">
+            </div>            
+          </div>
+
+          <a href="#mi" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+
+          <a href="#mi" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-12 my-3">
+        <!-- musical -->
+        <ul class="list-group w-100">
+          <li class="list-group-item bg-warning">Musical Instruments</li>
+          <li class="list-group-item">
+            <a href="#si" data-toggle="collapse">
+              String Instruments
+            </a>
+            <div class="collapse" id="si">
+              String instruments also termed stringed or chordophones originate or produce sound from vibrating strings. 
+              Performers usually play or pluck the strings of the instruments to produce sound. They use a plectrum or their 
+              fingers to create that great sound of the string instruments. <br>
+              for example <br>
+              Violin, Viola, Cello, Guitar, Autoharp, Banjo, Guitarron, Koto, Oud, Piano, Ukulele, ....
+            </div>
+          </li>
+          <li class="list-group-item">
+            <a href="#bi" data-toggle="collapse">
+              Brass Instruments
+            </a>
+            <div class="collapse" id="bi">
+              You can expect the brass instruments to work like the wind instruments saved for some modifications. The brass 
+              instruments feature air columns of which width you can alter using the slide mechanism or their press valves. <br>
+              for example <br>
+              Trumpet, Cornet, Flugelhorn, French horn, Trombone, Tuba, .....
+            </div>
+          </li>
+          <li class="list-group-item">
+            <a href="#wi" data-toggle="collapse">
+              Woodwind Instruments
+            </a>
+            <div class="collapse" id="wi">
+              Although these instruments are called woodwind, not all woodwind instruments are made of wood. Some typical materials 
+              used for woodwind instruments include cane, silver, brass, and other metals like platinum and gold. <br>
+              for exemple <br>
+              Piccolo, Flute, Oboe, English horn, ....
+            </div>
+          </li>
+          <li class="list-group-item">
+            <a href="#pi" data-toggle="collapse">
+              Percussion Instruments
+            </a>
+            <div class="collapse" id="pi">
+              Another musical instrument family is the percussion. These instruments are sounded by striking or scraping the instruments 
+              using a beater or rubbing the instruments with one’s hand. The percussions consist of a section in the modern orchestra. <br>
+              for exemple <br>
+              Timpani, Xylophone, Cymbals, Triangle, Woodblock, Castanets, ....
+            </div>
+          </li>
+          <li class="list-group-item">
+            <a href="#ki" data-toggle="collapse">
+              Keyboard Instruments
+            </a>
+            <div class="collapse" id="ki">
+              The keyboard instruments are characterized by standard keyboard, though their operations vary in range and usage. 
+              The keyboard, of course, consists of rows of levers that you would press with your fingers. <br>
+              for exemple <br>
+              Piano, Accordion, Harmonium, Harpsichord, Clavichord, Pipe Organ, Synthesizer, ....
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- connect -->
+  <div class="container-fluid align-items-center">
+    <div class="card  align-content-center">
+      <img src="img/fc.jpg" alt="" class="card-img">
+      <div class="card-img-overlay">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-12">
+            <form action="">
+              <div class="form-group my-2">
+                <label for="user" class="text-warning h3">User</label>
+                <input type="text" id="user" name="user" class="form-control" placeholder="User">
+              </div>
+              <div class="form-group my-2">
+                <label for="em" class="text-warning h3">Email</label>
+                <input type="email" id="em" name="email" class="form-control" placeholder="email">
+              </div>
+
+              <div class="form-group my-2">
+                <label for="comment" class="text-warning h3">comment</label>
+                <textarea name="comment" id="comment" class="form-control" placeholder="comment"></textarea>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-lg-6 col-md-12 h2 text-light my-2">
+            Thank you for visiting our website. We are ready to assist you; simply send us details about your problem, and we'll be 
+            happy to help.
+          </div>
+        </div>
+       
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sqr1, .sqr2, .sqr3{
+            height:400px; width:400px;
+          
+            position: absolute;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sqr2{rotate:120deg}
+        .sqr3{rotate:240deg}
+
+
+        .crl1, .crl2, .crl3{
+            height:100px; width:100px;
+            border-top:2px red solid;
+            border-radius:50px;
+            position:absolute;
+            top:110px;
+            animation-name: cc;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes cc{
+            from{rotate:0deg;}
+            to{rotate:360deg}
+        }
+    </style>
+</head>
+<body>
+    <div class="sqr1">
+        <div class="crl1"></div>
+    </div>
+    <div class="sqr2">
+        <div class="crl2"></div>
+    </div>
+    <div class="sqr3">
+        <div class="crl3"></div>
+    </div>
+</body>
+</html>
